@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+<head>
+ <title>jsPacker/usage/sample.html</title>
+ <meta charset="utf-8">
+ <meta name="author" content="Oathan Rex">
+ <link rel="stylesheet" href="offline/css/style.css" media="all">
+ <link rel="icon" href="favicon.ico" type="image/x-icon">
+ <script src="offline/js/my.js"></script>
+ <style>
+  pre.packed {color: #333;}
+ </style>
+</head>
+<body>
+<header>
+ <h1 class="home">Sample</h1>
+ <nav>
+	<ul>
+		<li><a href="/jsPacker/"><b>Home</b></a></li>
+		<li><a href="https://oathanrex.github.io/de4js/">jsUnpacker</a></li>
+		<li><a href="https://oathanrex.github.io/stt/">Speech to Text</a></li>
+	  </ul>
+ </nav>
+</header>
+<p>The packing algorithm is forgiving of all forms of JavaScript with one
+ exception. You must correctly terminate <em>all</em> JavaScript statements with semi-colons.
+ This includes <em>function expressions</em>.</p>
+<p>Here is an example of correct, semi-colon terminated JavaScript:</p>
+ 
+<pre class="javascript">
+// sample code
+
+var input, output;
+
+// notice the semi-colon at the END of function expressions
+
+onload = function() {
+	input = document.getElementById("input");
+	output = document.getElementById("output");
+	clearAll(true);
+};
+
+function packScript() {
+	output.value = pack(input.value);
+}
+
+function clearAll(focus) {
+	output.value = input.value = "";
+	// the "if" statement is NOT terminated with a semi-colon
+	if (focus) {
+		input.focus();
+	}
+}
+</pre>
+<footer>
+ <p>Copyright © 2004-2021 Oathan Rex. All rights reserved.</p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+<head>
+ <title>jsPacker/usage/</title>
+ <meta charset="utf-8">
+ <meta name="author" content="Oathan Rex">
+ <link rel="stylesheet" href="offline/css/style.css" media="all">
+ <link rel="icon" href="favicon.ico" type="image/x-icon">
+ <script src="offline/js/my.js"></script>
+</head>
+<body>
+<header>
+ <h1 class="home">Usage</h1>
+ <nav>
+  <ul>
+		<li><a href="/jsPacker/"><b>Home</b></a></li>
+		<li><a href="https://oathanrex.github.io/de4js/">jsUnpacker</a></li>
+		<li><a href="https://oathanrex.github.io/stt/">Speech to Text</a></li>
+	  </ul>
+ </nav>
+</header>
+<div class="note">
+ <p><strong>Note:</strong> this page needs to be updated for version 3.0.</p>
+</div>
+<h2>Usage</h2>
+<p>All statements, <em>including function declarations</em>, must be correctly
+ terminated with semi-colons. View the <a href="sample.html">sample</a> code.</p>
+<h3 id="options">Options</h3>
+<h4 id="encoding">Base62 encode</h4>
+<h4 id="encoding">Shrink variables</h4>
+<h3 id="features">Features</h3>
+<h4 id="triple-semi-colon">Debug code(<code>;;;</code>)</h4>
+<p>Three semi-colons (<kbd>;;;</kbd>) are treated like single-line comments.</p>
+<p>For example, this code:</p>
+<pre class="javascript">
+;;; alert("TEST!");
+</pre>
+<p>Would be removed by the packing program.</p>
+<h3 id="platforms">Platforms</h3>
+<p>Packed scripts should successfully unpack on <em>all</em> browsers that
+ support JavaScript. Only basic JavaScript functionality is used to decode the
+ packed script.</p>
+<p>Some browsers may not support the packer itself. The web interface
+ requires <abbr title="Document Object Model">DOM</abbr> support. Legacy browsers
+ will display a disabled interface.</p>
+<footer>
+ <p>Copyright © 2004-2021 Oathan Rex. All rights reserved.</p>
+</footer>
+</body>
+</html>
